@@ -25,7 +25,6 @@ export const skillGroups: SkillGroup[] = [
       "Vercel",
       "Cloudflare",
       "Render",
-      "Postman",
       "Swagger UI",
       "CI/CD",
     ],
