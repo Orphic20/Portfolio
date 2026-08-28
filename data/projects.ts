@@ -5,7 +5,8 @@ export interface Project {
   tags: string[];
   image: string;
   demoUrl?: string;
-  repoUrl: string;
+  /** Omit for private work — the "View code" button is skipped entirely. */
+  repoUrl?: string;
   role: string;
   timeline?: string;
   problem: string;
@@ -34,7 +35,8 @@ export const projects: Project[] = [
       "Firebase",
     ],
     image: "/projects/courtflow-cover.svg",
-    repoUrl: "https://github.com/Orphic20",
+    // No repoUrl or demoUrl: the deployment holds real client case data, so
+    // neither the source nor the running system is public.
     role: "Full-stack developer — three-person capstone team",
     timeline: "Jan – Oct 2026",
     problem:
@@ -73,9 +75,9 @@ export const projects: Project[] = [
       "Cloudinary",
     ],
     image: "/projects/veloride-cover.svg",
-    // Uncomment and paste the deployed URL to surface the "Live demo" button.
-    // demoUrl: "https://veloride.example.com",
-    repoUrl: "https://github.com/Orphic20",
+    // TODO(loewin): placeholder — swap for the real deployed URL before shipping.
+    demoUrl: "https://veloride.example.com",
+    repoUrl: "https://github.com/Orphic20/Bike_Rental",
     role: "Full-stack developer",
     timeline: "Jul – Sep 2026",
     problem:

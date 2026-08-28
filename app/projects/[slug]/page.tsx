@@ -78,35 +78,37 @@ export default async function ProjectPage({
               {project.description}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              {project.demoUrl && (
-                <Button asChild>
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+            {(project.demoUrl || project.repoUrl) && (
+              <div className="mt-8 flex flex-wrap gap-3">
+                {project.demoUrl && (
+                  <Button asChild>
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink aria-hidden="true" />
+                      Live demo
+                    </a>
+                  </Button>
+                )}
+                {project.repoUrl && (
+                  <Button
+                    asChild
+                    variant={project.demoUrl ? "outline" : "default"}
                   >
-                    <ExternalLink aria-hidden="true" />
-                    Live demo
-                  </a>
-                </Button>
-              )}
-              {project.repoUrl && (
-                <Button
-                  asChild
-                  variant={project.demoUrl ? "outline" : "default"}
-                >
-                  <a
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GitHubIcon aria-hidden="true" />
-                    View code
-                  </a>
-                </Button>
-              )}
-            </div>
+                    <a
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <GitHubIcon aria-hidden="true" />
+                      View code
+                    </a>
+                  </Button>
+                )}
+              </div>
+            )}
 
             <Separator className="mt-10" />
             <dl className="grid gap-6 py-8 sm:grid-cols-3">
