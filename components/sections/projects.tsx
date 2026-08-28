@@ -7,7 +7,7 @@ export function Projects() {
     <Section
       id="projects"
       eyebrow="Selected work"
-      heading="Projects I have shipped and are currently shipping"
+      heading="Projects I have shipped and being developed"
       intro="Full-stack builds where I owned the database schema, the API, and the interface. Each one opens into a short case study."
     >
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
