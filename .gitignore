@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local reference material — kept on disk, never published
+capstone-source.pdf
+capstone-text.txt

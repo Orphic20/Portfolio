@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Loewin Jon Villanueva — Portfolio
 
-## Getting Started
+Personal portfolio and project case studies. Built with Next.js (App Router),
+TypeScript, Tailwind CSS v4, and shadcn/ui components.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
+npm run build        # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Path                          | Purpose                                              |
+| ----------------------------- | ---------------------------------------------------- |
+| `app/page.tsx`                | Single-scroll home page (hero, about, projects, skills, contact) |
+| `app/projects/[slug]/page.tsx`| Statically generated project case study               |
+| `data/projects.ts`            | Typed project entries — the single source of truth    |
+| `data/skills.ts`              | Skill groups rendered as pills                        |
+| `data/site.ts`                | Name, contact links, nav links, resume path           |
+| `components/sections/`        | One component per home-page section                   |
+| `components/ui/`              | shadcn/ui primitives (button, card, badge, separator) |
+| `app/globals.css`             | Design tokens, font wiring, custom utilities          |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Theming
 
-## Learn More
+Tailwind v4 is CSS-first, so there is no `tailwind.config.ts` — the theme lives
+in `app/globals.css`. Every accented pixel resolves to one hue: change `--brand`
+in `:root` (and its `.dark` counterpart) and the whole site re-themes.
 
-To learn more about Next.js, take a look at the following resources:
+```css
+:root {
+  --brand: oklch(0.58 0.16 42); /* copper / ember */
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fonts are Fraunces (display), Manrope (body), and JetBrains Mono (meta labels),
+loaded via `next/font/google` in `app/layout.tsx`. Two custom utilities,
+`type-display` and `type-eyebrow`, wrap the display and label type styles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Light and dark themes are both defined. The toggle in the header stores the
+choice in `localStorage`, and an inline script in `app/layout.tsx` applies it
+before first paint to avoid a flash.
 
-## Deploy on Vercel
+## Before publishing — replace the placeholders
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Resume** — overwrite `public/loewin-villanueva-resume.pdf` with the real
+   PDF (the current file is a generated stand-in).
+2. **Project art** — replace `public/projects/*.svg` with real screenshots and
+   update `image` / `gallery` in `data/projects.ts`. Keep the alt text accurate.
+3. **Repo and demo links** — each project currently points at the GitHub
+   profile root. Set `repoUrl` to the individual repository and add `demoUrl`
+   where a deployment exists (the "Live demo" button only renders when
+   `demoUrl` is set).
+4. **Timelines** — add `timeline` to each project to show it in the meta row.
+5. **Certificates** — name the three Google Professional Certificates in
+   `components/sections/about.tsx`.
+6. **Site URL** — update `site.url` in `data/site.ts` so Open Graph metadata
+   points at the real domain.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Once real assets are in place, `scripts/generate-placeholder-assets.mjs` can be
+deleted.
+
+## Deploying
+
+Push to GitHub and import the repo on Vercel; no environment variables are
+required. Every route is static.

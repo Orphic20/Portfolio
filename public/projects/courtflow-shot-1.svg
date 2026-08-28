@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img">
+  <rect width="1200" height="750" fill="#faf8f5" />
+  <rect x="0" y="0" width="1200" height="96" fill="#1c1917" fill-opacity="0.04" />
+  <circle cx="60" cy="48" r="12" fill="#c2603a" />
+  <text x="96" y="57" fill="#1c1917" fill-opacity="0.65" font-family="ui-monospace, monospace" font-size="26" letter-spacing="3">COURTFLOW</text>
+  <rect x="80" y="150" width="260" height="30" rx="8" fill="#1c1917" fill-opacity="0.55" />
+  <rect x="80" y="230" width="420" height="18" rx="9" fill="#1c1917" fill-opacity="0.12" /><rect x="80" y="292" width="300" height="18" rx="9" fill="#1c1917" fill-opacity="0.12" /><rect x="80" y="354" width="380" height="18" rx="9" fill="#1c1917" fill-opacity="0.12" /><rect x="80" y="416" width="240" height="18" rx="9" fill="#1c1917" fill-opacity="0.12" /><rect x="80" y="478" width="340" height="18" rx="9" fill="#1c1917" fill-opacity="0.12" />
+  <rect x="640" y="410" width="130" height="150" rx="12" fill="#c2603a" fill-opacity="0.25" /><rect x="810" y="350" width="130" height="210" rx="12" fill="#c2603a" fill-opacity="0.5" /><rect x="980" y="440" width="130" height="120" rx="12" fill="#c2603a" fill-opacity="0.75" />
+  <text x="80" y="690" fill="#1c1917" fill-opacity="0.35" font-family="ui-monospace, monospace" font-size="22" letter-spacing="3">PLACEHOLDER 1</text>
+</svg>
