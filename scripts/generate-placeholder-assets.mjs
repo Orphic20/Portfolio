@@ -21,7 +21,7 @@ const brand = "#c2603a";
 
 const projects = [
   { slug: "courtflow", name: "CourtFlow", kicker: "Case management", shots: 3 },
-  { slug: "veloride", name: "VeloRide", kicker: "Rental platform", shots: 3 },
+  { slug: "veloride", name: "Muñoz Bike Rental", kicker: "Rental platform", shots: 3 },
   {
     slug: "rag-search-engine",
     name: "RAG Search Engine",

@@ -65,7 +65,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "VeloRide",
+    name: "Muñoz Bike Rental",
     slug: "veloride",
     description:
       "Booking and staff-release system for a 100+ bike rental shop — catalogue, date-based availability, multi-bike checkout, and GCash or cash at pickup",
@@ -98,11 +98,11 @@ export const projects: Project[] = [
     gallery: [
       {
         src: "/projects/veloride-shot-1.svg",
-        alt: "VeloRide catalogue listing bikes with availability by pickup date",
+        alt: "Muñoz Bike Rental catalogue listing bikes with availability by pickup date",
       },
       {
         src: "/projects/veloride-shot-2.svg",
-        alt: "VeloRide checkout for one or more bikes, daily or weekly rate, and GCash or cash payment",
+        alt: "Muñoz Bike Rental checkout for one or more bikes, daily or weekly rate, and GCash or cash payment",
       },
     ],
   },
