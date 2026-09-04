@@ -83,7 +83,7 @@ export const projects: Project[] = [
     demoUrl: "https://veloride.example.com",
     repoUrl: "https://github.com/Orphic20/Bike_Rental",
     role: "Full-stack developer",
-    timeline: "Jul – Sep 2026",
+    timeline: "Aug – Sep 2026",
     problem:
       "A bike rental shop with a 100+ bike fleet needed a catalogue customers could book from — one or more bikes, today or a future pickup date, daily or weekly rates — and a way to pay by GCash (receipt upload) or cash at pickup. Staff still had to match a government ID to the account, confirm payment, and release the bike. An online reservation could not be treated as if the bike was already out.",
     contribution: [
