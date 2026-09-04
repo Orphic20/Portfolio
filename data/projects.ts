@@ -10,9 +10,13 @@ export interface Project {
   role: string;
   timeline?: string;
   problem: string;
-  /** What I personally did — shown in the "My role" column of the case study. */
-  contribution?: string;
-  outcome: string;
+  /** Heading for the 02 column. Defaults to "My role". */
+  contributionTitle?: string;
+  /** What I personally did — shown in the 02 column of the case study. */
+  contribution?: string | string[];
+  /** Heading for the outcome block. Defaults to "Outcome". */
+  outcomeTitle?: string;
+  outcome: string | string[];
   /** Case-study gallery. Swap these for real screenshots when you have them. */
   gallery?: { src: string; alt: string }[];
 }
@@ -64,7 +68,7 @@ export const projects: Project[] = [
     name: "VeloRide",
     slug: "veloride",
     description:
-      "End-to-end bike rental platform automating reservations, maintenance, and payments for a 100+ bike fleet",
+      "Booking and staff-release system for a 100+ bike rental shop — catalogue, date-based availability, multi-bike checkout, and GCash or cash at pickup",
     tags: [
       "Next.js",
       "React",
@@ -81,50 +85,57 @@ export const projects: Project[] = [
     role: "Full-stack developer",
     timeline: "Jul – Sep 2026",
     problem:
-      "A bike rental operation needed real-time inventory, dynamic pricing, and reliable booking without double-bookings",
-    contribution:
-      "Built the platform end to end: the Supabase-hosted PostgreSQL schema and its transactional booking logic, the FastAPI services behind it, and the Next.js interface on top. Also wired up Google OAuth, Supabase Auth (JWT) route protection, and the webhook interceptors that capture and compress GCash payment receipts.",
+      "A bike rental shop with a 100+ bike fleet needed a catalogue customers could book from — one or more bikes, today or a future pickup date, daily or weekly rates — and a way to pay by GCash (receipt upload) or cash at pickup. Staff still had to match a government ID to the account, confirm payment, and release the bike. An online reservation could not be treated as if the bike was already out.",
+    contribution: [
+      "Designed the Postgres schema around one booking (checkout and payment) with many rentals (one per bike), including payment states and rental status: reserved until staff release, then active with the bike marked rented.",
+      "Built the FastAPI services for checkout that sums each bike’s fixed daily or weekly rate, date-based availability, and extension or swap requests.",
+      "Built the Next.js customer and staff UI: browse and book; ID check, payment confirmation, release, and return (available or maintenance).",
+      "Wired Google OAuth, Supabase Auth, and JWT protection on API routes.",
+      "Stored GCash receipt images on Cloudinary for staff to verify.",
+    ],
     outcome:
-      "Relational PostgreSQL database via Supabase with transactional booking logic, Google OAuth, GCash payment webhook capture via Cloudinary, Supabase Auth (JWT), zero-cost deployment across Cloudflare and Render",
+      "The shop runs the full loop on a live fleet: customer reserves and pays, staff match ID and confirm payment, then release the bike; on return, staff mark it available or send it to maintenance. A reserved bike stays available in the catalogue until release — it may simply be unavailable for that pickup date. A Postgres overlap constraint applies to active (released) rentals. Hosted on Cloudflare and Render.",
     gallery: [
       {
         src: "/projects/veloride-shot-1.svg",
-        alt: "VeloRide fleet inventory grid showing bike availability by model",
+        alt: "VeloRide catalogue listing bikes with availability by pickup date",
       },
       {
         src: "/projects/veloride-shot-2.svg",
-        alt: "VeloRide booking flow with date range picker and live price breakdown",
-      },
-      {
-        src: "/projects/veloride-shot-3.svg",
-        alt: "VeloRide maintenance log tracking servicing history per bike",
+        alt: "VeloRide checkout for one or more bikes, daily or weekly rate, and GCash or cash payment",
       },
     ],
   },
   {
-    name: "RAG Search Engine",
+    name: "Resume & Candidate RAG Engine",
     slug: "rag-search-engine",
     description:
-      "Low-latency retrieval-augmented generation pipeline for semantic search over unstructured documents",
-    tags: ["Python", "FastAPI", "PostgreSQL (pgvector)", "LangChain", "OpenAI"],
+      "Production-ready retrieval-augmented generation pipeline combining pgvector semantic search with relational metadata filtering and async processing",
+    tags: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL (pgvector)",
+      "Redis",
+      "SQLAlchemy 2.0",
+      "Pydantic v2",
+      "OpenAI API",
+    ],
     image: "/projects/rag-search-engine-cover.svg",
     repoUrl: "https://github.com/Orphic20",
-    role: "Developer",
+    role: "Backend Software Engineer",
     problem:
-      "Needed context-grounded answers over unstructured documents without hallucination-prone raw LLM responses",
-    contribution:
-      "Building the retrieval pipeline: document parsing, chunking, and embedding through LangChain, with pgvector similarity search served behind a FastAPI endpoint. Currently tuning retrieval strategy and prompt structure to keep answers grounded in the source material.",
-    outcome:
-      "In development — automated parsing, chunking, and embedding via LangChain and OpenAI, with retrieval and prompt engineering tuned to reduce hallucinations",
-    gallery: [
-      {
-        src: "/projects/rag-search-engine-shot-1.svg",
-        alt: "Retrieval pipeline diagram from document parsing through chunking to embedding storage",
-      },
-      {
-        src: "/projects/rag-search-engine-shot-2.svg",
-        alt: "Semantic search results ranked by vector similarity score with source citations",
-      },
+      "Traditional keyword search misses qualified candidates who describe skills using different phrasing — for example, missing a React candidate when searching for “Frontend Developer.” Standard LLMs hallucinate skills, and pure vector search cannot enforce hard constraints like “must have 3+ years of experience.”",
+    contributionTitle: "Key engineering highlights",
+    contribution: [
+      "Layout-aware ingestion: replaced raw text splitters with layout-aware parsing (PyMuPDF4LLM) so multi-column resume formatting is preserved before chunking.",
+      "Hybrid search and metadata extraction: automated structured metadata extraction (years of experience, core skills) on upload, so a single query can combine Postgres SQL filters with pgvector cosine similarity.",
+      "Non-blocking task queue: an asynchronous background worker (Redis + ARQ) runs file parsing and OpenAI embedding calls off the request, returning 202 Accepted immediately.",
+      "Production architecture: SQLAlchemy ORM models stay decoupled from public Pydantic v2 API schemas so internal structures — including raw 1,536-dimensional float arrays — never leak over the network.",
+    ],
+    outcomeTitle: "Outcome & system performance",
+    outcome: [
+      "Built an asynchronous, end-to-end RAG service that streams sub-second semantic search queries back to the client.",
+      "Scaled document processing to handle batch PDF uploads without blocking API responsiveness or hitting OpenAI rate limits.",
     ],
   },
 ];

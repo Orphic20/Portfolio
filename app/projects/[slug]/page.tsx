@@ -35,7 +35,25 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProjectPage({
+function CaseStudyCopy({
+  text,
+  className,
+}: {
+  text: string | string[];
+  className?: string;
+}) {
+  if (Array.isArray(text)) {
+    return (
+      <ul className={`list-disc space-y-2 pl-5 leading-relaxed ${className ?? ""}`}>
+        {text.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  return <p className={`leading-relaxed ${className ?? ""}`}>{text}</p>;
+}
   params,
 }: PageProps<"/projects/[slug]">) {
   const { slug } = await params;
@@ -157,9 +175,17 @@ export default async function ProjectPage({
               >
                 My role
               </h2>
-              <p className="text-muted-foreground mt-4 leading-relaxed">
-                {project.contribution ?? project.role}
-              </p>
+              {Array.isArray(project.contribution) ? (
+                <ul className="text-muted-foreground mt-4 list-disc space-y-2 pl-5 leading-relaxed">
+                  {project.contribution.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-muted-foreground mt-4 leading-relaxed">
+                  {project.contribution ?? project.role}
+                </p>
+              )}
             </section>
           </div>
 

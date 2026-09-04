@@ -89,9 +89,9 @@ export function About() {
             enforced.
           </p>
           <p className="text-muted-foreground">
-            I&apos;m looking for an OJT placement in web development or software
-            engineering where I can contribute to a production codebase and
-            learn from a team that reviews code carefully.
+            I&apos;m looking for an OJT placement in web development, backend, or
+            software engineering where I can contribute to a production
+            codebase and learn from a team that reviews code carefully.
           </p>
         </div>
 
