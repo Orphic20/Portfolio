@@ -35,25 +35,7 @@ export async function generateMetadata({
   };
 }
 
-function CaseStudyCopy({
-  text,
-  className,
-}: {
-  text: string | string[];
-  className?: string;
-}) {
-  if (Array.isArray(text)) {
-    return (
-      <ul className={`list-disc space-y-2 pl-5 leading-relaxed ${className ?? ""}`}>
-        {text.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    );
-  }
-
-  return <p className={`leading-relaxed ${className ?? ""}`}>{text}</p>;
-}
+export default async function ProjectPage({
   params,
 }: PageProps<"/projects/[slug]">) {
   const { slug } = await params;
