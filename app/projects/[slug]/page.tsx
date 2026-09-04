@@ -210,9 +210,17 @@ export default async function ProjectPage({
               id="outcome-heading"
               className="type-display text-2xl font-semibold"
             >
-              Outcome
+              {project.outcomeTitle ?? "Outcome"}
             </h2>
-            <p className="mt-4 leading-relaxed">{project.outcome}</p>
+            {Array.isArray(project.outcome) ? (
+              <ul className="mt-4 list-disc space-y-2 pl-5 leading-relaxed">
+                {project.outcome.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-4 leading-relaxed">{project.outcome}</p>
+            )}
             <ul className="mt-6 flex flex-wrap gap-1.5">
               {project.tags.map((tag) => (
                 <li key={tag}>

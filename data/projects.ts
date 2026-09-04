@@ -110,7 +110,7 @@ export const projects: Project[] = [
     name: "Resume & Candidate RAG Engine",
     slug: "rag-search-engine",
     description:
-      "Production-ready retrieval-augmented generation pipeline combining pgvector semantic search with relational metadata filtering and async processing",
+      "In development — retrieval-augmented generation pipeline combining pgvector semantic search with relational metadata filtering and async processing",
     tags: [
       "Python",
       "FastAPI",
@@ -132,10 +132,10 @@ export const projects: Project[] = [
       "Non-blocking task queue: an asynchronous background worker (Redis + ARQ) runs file parsing and OpenAI embedding calls off the request, returning 202 Accepted immediately.",
       "Production architecture: SQLAlchemy ORM models stay decoupled from public Pydantic v2 API schemas so internal structures — including raw 1,536-dimensional float arrays — never leak over the network.",
     ],
-    outcomeTitle: "Outcome & system performance",
+    outcomeTitle: "Planned outcome",
     outcome: [
-      "Built an asynchronous, end-to-end RAG service that streams sub-second semantic search queries back to the client.",
-      "Scaled document processing to handle batch PDF uploads without blocking API responsiveness or hitting OpenAI rate limits.",
+      "This will be an asynchronous, end-to-end RAG service that streams sub-second semantic search queries back to the client.",
+      "Document processing will handle batch PDF uploads without blocking API responsiveness or hitting OpenAI rate limits.",
     ],
   },
 ];
