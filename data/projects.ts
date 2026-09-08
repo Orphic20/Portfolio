@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "PostgreSQL",
       "Firebase",
     ],
-    image: "/projects/courtflow-cover.svg",
+    image: "/projects/courtflow-cover.png",
     // No repoUrl or demoUrl: the deployment holds real client case data, so
     // neither the source nor the running system is public.
     role: "Full-stack developer — three-person capstone team",
@@ -51,16 +51,12 @@ export const projects: Project[] = [
       "Built and deployed end to end. PostgreSQL 16 behind FastAPI with GIN-indexed full-text search across case titles, client names, and document contents; a daily cron job that flags hearings falling within three days and writes delivery status back to the database so staff are never alerted twice; and version-controlled document storage on Firebase Storage, with version, status, and approver tracked relationally. Shipped through GitHub CI/CD to Vercel and Render.",
     gallery: [
       {
-        src: "/projects/courtflow-shot-1.svg",
-        alt: "CourtFlow dashboard showing active cases and upcoming court hearings",
+        src: "/projects/courtflow-search.png",
+        alt: "CourtFlow search results matching cases, clients, and document contents for a query",
       },
       {
-        src: "/projects/courtflow-shot-2.svg",
-        alt: "CourtFlow client directory listing registered clients and their case status",
-      },
-      {
-        src: "/projects/courtflow-shot-3.svg",
-        alt: "CourtFlow documents module showing the version history of a case file",
+        src: "/projects/courtflow-documents.png",
+        alt: "CourtFlow document preview showing version, status, and approver for a case file",
       },
     ],
   },
