@@ -20,7 +20,6 @@ export interface Project {
   galleryTitle?: string;
   /** Heading for the outcome block. Defaults to "Outcome". */
   outcomeTitle?: string;
-  outcomeTitle?: string;
   outcome: string | string[];
   /** Case-study gallery. Swap these for real screenshots when you have them. */
   gallery?: { src: string; alt: string }[];
