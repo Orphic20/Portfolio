@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "OJT applicant",
     "web developer",
     "software engineering",
-    "Next.js",
+    "Vite",
     "FastAPI",
     "Central Luzon State University",
   ],

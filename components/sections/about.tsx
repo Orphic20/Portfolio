@@ -83,7 +83,7 @@ export function About() {
           <p className="text-muted-foreground">
             Most of what I know comes from building things end to end: designing
             the PostgreSQL schema, writing the FastAPI endpoints, then putting a
-            Next.js and Tailwind interface on top and deploying it. I care about
+            Vite + React (wouter) and Tailwind interface on top and deploying it. I care about
             software that holds up in real use — indexed search that stays fast,
             booking logic that cannot double-book, and auth that is actually
             enforced.

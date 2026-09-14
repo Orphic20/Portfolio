@@ -10,7 +10,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     label: "Frameworks & UI",
-    items: ["Next.js", "React", "FastAPI", "Tailwind CSS", "shadcn/ui"],
+    items: ["Vite", "React", "wouter", "FastAPI", "Tailwind CSS", "shadcn/ui"],
   },
   {
     label: "Databases & cloud",

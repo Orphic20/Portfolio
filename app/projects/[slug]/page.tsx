@@ -142,7 +142,7 @@ export default async function ProjectPage({
                 id="problem-heading"
                 className="type-display text-2xl font-semibold"
               >
-                The problem
+                {project.problemTitle ?? "The problem"}
               </h2>
               <p className="text-muted-foreground mt-4 leading-relaxed">
                 {project.problem}
@@ -155,7 +155,7 @@ export default async function ProjectPage({
                 id="role-heading"
                 className="type-display text-2xl font-semibold"
               >
-                My role
+                {project.contributionTitle ?? "My role"}
               </h2>
               {Array.isArray(project.contribution) ? (
                 <ul className="text-muted-foreground mt-4 list-disc space-y-2 pl-5 leading-relaxed">
@@ -178,7 +178,7 @@ export default async function ProjectPage({
                 id="gallery-heading"
                 className="type-display text-2xl font-semibold"
               >
-                Screens
+                {project.galleryTitle ?? "Screens"}
               </h2>
               <ul className="mt-8 grid gap-6 sm:grid-cols-2">
                 {project.gallery.map((shot) => (

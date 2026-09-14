@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img">
+  <rect width="1200" height="750" fill="#1c1917" />
+  <rect x="48" y="48" width="1104" height="654" rx="12" fill="#111110" />
+  <circle cx="88" cy="88" r="8" fill="#c2603a" />
+  <circle cx="116" cy="88" r="8" fill="#c2603a" fill-opacity="0.45" />
+  <circle cx="144" cy="88" r="8" fill="#c2603a" fill-opacity="0.25" />
+  <text x="180" y="96" fill="#faf8f5" fill-opacity="0.55" font-family="ui-monospace, monospace" font-size="18" letter-spacing="3">HERMES AGENT · CLI</text>
+  <text x="80" y="180" fill="#c2603a" font-family="ui-monospace, monospace" font-size="20">$  hermes index ./vault</text>
+  <text x="80" y="230" fill="#faf8f5" fill-opacity="0.45" font-family="ui-monospace, monospace" font-size="18">traversing 1,000+ markdown files</text>
+  <text x="80" y="280" fill="#faf8f5" fill-opacity="0.45" font-family="ui-monospace, monospace" font-size="18">embedding notes ’ lancedb</text>
+  <text x="80" y="330" fill="#faf8f5" fill-opacity="0.45" font-family="ui-monospace, monospace" font-size="18">surfacing unlinked thematic connections</text>
+  <text x="80" y="420" fill="#c2603a" font-family="ui-monospace, monospace" font-size="20">$  hermes synthesize --wikilinks</text>
+  <text x="80" y="470" fill="#faf8f5" fill-opacity="0.45" font-family="ui-monospace, monospace" font-size="18">writing structured synthesis files</text>
+  <text x="80" y="680" fill="#faf8f5" fill-opacity="0.3" font-family="ui-monospace, monospace" font-size="16" letter-spacing="3">PLACEHOLDER  REPLACE WITH CLI SCREENSHOT</text>
+</svg>

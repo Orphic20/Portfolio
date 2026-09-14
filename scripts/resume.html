@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loewin Jon Villanueva — Resume</title>
+    <style>
+      @page {
+        size: letter;
+        margin: 0.42in 0.5in 0.38in;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        color: #1c1917;
+        font: 9.35pt/1.28 "Calibri", "Segoe UI", Arial, sans-serif;
+        font-variant-ligatures: none;
+      }
+      h1 {
+        margin: 0 0 1px;
+        font-size: 17pt;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: center;
+      }
+      .tagline {
+        margin: 0 0 2px;
+        text-align: center;
+        font-size: 9.5pt;
+      }
+      .contact {
+        margin: 0 0 7px;
+        text-align: center;
+        font-size: 8.6pt;
+        color: #3f3f46;
+      }
+      .contact a {
+        color: #3f3f46;
+        text-decoration: none;
+      }
+      h2 {
+        margin: 7px 0 3px;
+        padding-bottom: 1px;
+        border-bottom: 1.1px solid #1c1917;
+        font-size: 9.8pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        break-after: avoid;
+      }
+      p {
+        margin: 0 0 3px;
+      }
+      .summary {
+        text-align: justify;
+      }
+      .skills p {
+        margin: 0 0 1px;
+      }
+      .job {
+        margin-bottom: 4.5px;
+      }
+      .job-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        font-weight: 700;
+      }
+      .job-meta {
+        font-size: 8.6pt;
+        font-style: italic;
+        color: #3f3f46;
+      }
+      .dates {
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 600;
+        color: #1c1917;
+      }
+      ul {
+        margin: 1px 0 0;
+        padding-left: 15px;
+      }
+      li {
+        margin: 0 0 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LOEWIN JON VILLANUEVA</h1>
+    <p class="tagline">
+      BS Information Technology Student | OJT Applicant — Web Development,
+      Backend &amp; Software Engineering
+    </p>
+    <p class="contact">
+      Nueva Ecija, Philippines ·
+      <a href="mailto:loewinvillanueva07@gmail.com">loewinvillanueva07@gmail.com</a>
+      ·
+      <a href="https://www.linkedin.com/in/loewin-villanueva-a9a019312"
+        >linkedin.com/in/loewin-villanueva-a9a019312</a
+      >
+      ·
+      <a href="https://github.com/Orphic20">github.com/Orphic20</a>
+    </p>
+
+    <h2>Summary</h2>
+    <p class="summary">
+      BS Information Technology student at Central Luzon State University and
+      Presidential Lister, building full-stack products with Vite, React, FastAPI,
+      and PostgreSQL. Seeking an OJT placement in web development, backend, or
+      software engineering. Google certificates in IT support, Python
+      automation, and AI.
+    </p>
+
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <p>
+        <strong>Languages:</strong> Python, JavaScript, TypeScript, PHP, C, SQL
+      </p>
+      <p>
+        <strong>Frameworks &amp; UI:</strong> Vite, React, wouter, FastAPI,
+        Tailwind CSS, shadcn/ui
+      </p>
+      <p>
+        <strong>Databases &amp; cloud:</strong> PostgreSQL, MySQL, Supabase,
+        Cloudinary, Firebase
+      </p>
+      <p>
+        <strong>Tools &amp; DevOps:</strong> Git, GitHub, Linux CLI, Vercel,
+        Cloudflare, Render, Swagger UI, CI/CD
+      </p>
+      <p>
+        <strong>Core concepts:</strong> Agile / Scrum, networking fundamentals,
+        OS administration, IT security basics, troubleshooting &amp; debugging,
+        automation
+      </p>
+    </div>
+
+    <h2>Technical Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span>CourtFlow — Legal Case Management Platform</span>
+        <span class="dates">Jan – Oct 2026</span>
+      </div>
+      <p class="job-meta">
+        Full-stack developer, three-person capstone team · Vite, React, wouter,
+        FastAPI, PostgreSQL, Firebase
+      </p>
+      <ul>
+        <li>
+          Built a case-management system for a civil and family law practice in
+          Nueva Ecija (200 clients, 150 active cases) previously run on
+          spreadsheets, a whiteboard, and a group chat.
+        </li>
+        <li>
+          Designed the PostgreSQL 16 schema and FastAPI services: GIN-indexed
+          full-text search across cases, clients, and documents; a daily cron
+          job that flags hearings within three days.
+        </li>
+        <li>
+          Version-controlled case files on Firebase Storage (version, status,
+          approver in Postgres). Shipped via GitHub CI/CD to Vercel and Render
+          in one-to-two week Scrum sprints.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span>Muñoz Bike Rental</span>
+        <span class="dates">Aug – Sep 2026</span>
+      </div>
+      <p class="job-meta">
+        Full-stack · React, Vite, FastAPI, Supabase
+      </p>
+      <ul>
+        <li>
+          Catalogue, date-based availability, and multi-bike checkout for a
+          100+ bike shop (GCash receipt or cash at pickup).
+        </li>
+        <li>
+          Modeled one booking (payment) with many rentals (one per bike). Bikes
+          stay available until staff release; then the rental is active and the
+          bike is rented.
+        </li>
+        <li>
+          Checkout uses each bike's daily or weekly rate. GCash receipts go to
+          Cloudinary for staff review (not a payment webhook). Google OAuth and
+          JWT-protected API.
+        </li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span>Resume &amp; Candidate RAG Engine</span>
+        <span class="dates">In development</span>
+      </div>
+      <p class="job-meta">
+        Python, FastAPI, PostgreSQL (pgvector), Redis, SQLAlchemy 2.0, Pydantic
+        v2, OpenAI API
+      </p>
+      <ul>
+        <li>
+          Building hybrid search that combines Postgres SQL filters with
+          pgvector similarity, using layout-aware resume parsing (PyMuPDF4LLM)
+          and a Redis + ARQ worker that returns 202 Accepted on upload.
+        </li>
+        <li>
+          Planned: streamed search results and batch PDF uploads without
+          blocking the API.
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span>Personal Portfolio · Next.js, React, Tailwind CSS, Vercel</span>
+        <span class="dates">2026</span>
+      </div>
+      <ul>
+        <li>
+          Designed and deployed a static personal site with typed project case
+          studies and Vercel CI/CD.
+        </li>
+      </ul>
+    </div>
+
+    <h2>Certifications</h2>
+    <div class="job">
+      <div class="job-head">
+        <span>Google IT Automation with Python — Professional Certificate</span>
+        <span class="dates">Mar 2026</span>
+      </div>
+      <p class="job-meta">
+        Coursera · Python, Git, troubleshooting, configuration management, IT
+        automation
+      </p>
+    </div>
+    <div class="job">
+      <div class="job-head">
+        <span>Google IT Support — Professional Certificate</span>
+        <span class="dates">Jan 2025</span>
+      </div>
+      <p class="job-meta">
+        Coursera · Technical support, networking, operating systems, IT security
+      </p>
+    </div>
+    <div class="job">
+      <div class="job-head">
+        <span>Google AI Essentials</span>
+        <span class="dates">Nov 2024</span>
+      </div>
+      <p class="job-meta">
+        Coursera · Foundations of AI tools and responsible AI practices
+      </p>
+    </div>
+
+    <h2>Education</h2>
+    <div class="job">
+      <div class="job-head">
+        <span>BS Information Technology, Central Luzon State University</span>
+        <span class="dates">2023 – Present</span>
+      </div>
+      <p>
+        Nueva Ecija, Philippines · Presidential Lister · Class President, AY
+        2024–2027 · Student Coach &amp; Team Captain, Varsity Swimming · Batch
+        Leader, BITS
+      </p>
+    </div>
+
+    <h2>Leadership &amp; Additional Experience</h2>
+    <p>
+      <strong>Project Manager / Digital Asset Manager, Limitless Guild</strong>
+      (Nov 2021 – Jul 2022) — Recruited and managed 20+ scholars; built
+      operational tracking systems.
+      <br />
+      <strong
+        >Personal Fitness Trainer / Swimming &amp; Kickboxing Instructor</strong
+      >
+      (Sep 2024 – Dec 2025) — Coached 10+ clients; managed scheduling and
+      curriculum.
+    </p>
+  </body>
+</html>

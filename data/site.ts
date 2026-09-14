@@ -3,7 +3,7 @@ export const site = {
   initials: "LJV",
   role: "OJT Applicant — Web Development & Software Engineering",
   summary:
-    "BS Information Technology student at Central Luzon State University building full-stack products with Next.js, FastAPI, and PostgreSQL.",
+    "BS Information Technology student at Central Luzon State University building full-stack products with Vite, React, FastAPI, and PostgreSQL.",
   location: "Nueva Ecija, Philippines",
   email: "loewinvillanueva07@gmail.com",
   github: "https://github.com/Orphic20",
