@@ -160,7 +160,7 @@ export const projects: Project[] = [
       "Obsidian",
       "Markdown",
     ],
-    image: "/projects/knowledge-graph-cover.svg",
+    image: "/projects/knowledge-graph-cover.png",
     role: "AI Engineering & Systems",
     timeline: "Sep – Oct 2026",
     problem:
@@ -184,8 +184,8 @@ export const projects: Project[] = [
         alt: "Placeholder for a terminal screenshot of Hermes Agent indexing the research vault from the CLI",
       },
       {
-        src: "/projects/knowledge-graph-shot-graph.svg",
-        alt: "Placeholder for an Obsidian knowledge graph showing linked notes in the research vault",
+        src: "/projects/knowledge-graph-cover.png",
+        alt: "Obsidian graph view of the research vault, with notes clustered by linked concepts",
       },
     ],
   },
