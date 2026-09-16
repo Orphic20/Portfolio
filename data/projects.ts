@@ -90,7 +90,7 @@ export const projects: Project[] = [
       "Supabase",
       "Cloudinary",
     ],
-    image: "/projects/veloride-cover.svg",
+    image: "/projects/munoz-cover.png",
     // TODO(loewin): placeholder — swap for the real deployed URL before shipping.
     demoUrl: "https://veloride.example.com",
     repoUrl: "https://github.com/Orphic20/Bike_Rental",
@@ -106,12 +106,16 @@ export const projects: Project[] = [
       "One booking (payment) has many rentals (one per bike). Bikes stay available until staff release; then the rental is active and the bike is rented. Checkout uses each bike’s daily or weekly rate. GCash receipts go to Cloudinary for staff review (not a payment webhook). Google OAuth and JWT-protected API.",
     gallery: [
       {
-        src: "/projects/veloride-shot-1.svg",
-        alt: "Muñoz Bike Rental catalogue listing bikes with availability by pickup date",
+        src: "/projects/munoz-cart.png",
+        alt: "Muñoz Bike Rental checkout with pickup date, three bikes selected, and daily rate total",
       },
       {
-        src: "/projects/veloride-shot-2.svg",
-        alt: "Muñoz Bike Rental checkout for one or more bikes, daily or weekly rate, and GCash or cash payment",
+        src: "/projects/munoz-gcash.png",
+        alt: "Muñoz Bike Rental payment step with cash at pickup or GCash receipt upload",
+      },
+      {
+        src: "/projects/munoz-staff.png",
+        alt: "Muñoz Bike Rental staff counter with today’s pickup queue and a booking ready to release",
       },
     ],
   },
