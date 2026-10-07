@@ -47,6 +47,12 @@ const credentials: Credential[] = [
     label: "Certifications",
     items: [
       {
+        name: "AWS Academy Graduate — Cloud Foundations",
+        issuer: "AWS",
+        date: "Oct 2026",
+        href: "https://www.credly.com/badges/037ea526-60e9-4315-9301-4681516d0ff7/public_url",
+      },
+      {
         name: "Google IT Automation with Python",
         issuer: "Coursera",
         date: "Mar 2026",
@@ -77,8 +83,8 @@ export function About() {
             I&apos;m a BS Information Technology student at Central Luzon State
             University, where I hold Presidential Lister standing and serve as
             Class President for the 2024–2027 term. Alongside coursework
-            I&apos;ve earned three Google certificates covering IT support,
-            Python automation, and AI.
+            I&apos;ve earned Google certificates in IT support, Python
+            automation, and AI, plus AWS Academy Cloud Foundations.
           </p>
           <p className="text-muted-foreground">
             Most of what I know comes from building things end to end: designing
