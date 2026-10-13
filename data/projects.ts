@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "PostgreSQL",
       "Firebase",
     ],
-    image: "/projects/courtflow-cover.png",
+    image: "/projects/courtflow-cover.webp",
     // No repoUrl or demoUrl: the deployment holds real client case data, so
     // neither the source nor the running system is public.
     role: "Full-stack developer — three-person capstone team",
@@ -56,23 +56,23 @@ export const projects: Project[] = [
       "Built and deployed end to end. PostgreSQL 16 behind FastAPI with GIN-indexed full-text search across case titles, client names, and document contents; a daily cron job that flags hearings falling within three days and writes delivery status back to the database so staff are never alerted twice; and version-controlled document storage on Firebase Storage, with version, status, and approver tracked relationally. Shipped through GitHub CI/CD to Vercel and Render.",
     gallery: [
       {
-        src: "/projects/courtflow-clients.png",
+        src: "/projects/courtflow-clients.webp",
         alt: "CourtFlow client directory listing companies, case types, and last contact",
       },
       {
-        src: "/projects/courtflow-calendar.png",
+        src: "/projects/courtflow-calendar.webp",
         alt: "CourtFlow hearing calendar with today’s agenda and hearings on the selected date",
       },
       {
-        src: "/projects/courtflow-documents.png",
+        src: "/projects/courtflow-documents.webp",
         alt: "CourtFlow documents list with version history for a case file",
       },
       {
-        src: "/projects/courtflow-client-overview.png",
+        src: "/projects/courtflow-client-overview.webp",
         alt: "CourtFlow client overview showing cases, hearings, and recent documents for one company",
       },
       {
-        src: "/projects/courtflow-client-cases.png",
+        src: "/projects/courtflow-client-cases.webp",
         alt: "CourtFlow client cases view with matter status from intake through hearing",
       },
     ],
@@ -90,7 +90,7 @@ export const projects: Project[] = [
       "Supabase",
       "Cloudinary",
     ],
-    image: "/projects/munoz-cover.png",
+    image: "/projects/munoz-cover.webp",
     // TODO(loewin): placeholder — swap for the real deployed URL before shipping.
     demoUrl: "https://veloride.example.com",
     repoUrl: "https://github.com/Orphic20/Bike_Rental",
@@ -106,11 +106,11 @@ export const projects: Project[] = [
       "One booking (payment) has many rentals (one per bike). Bikes stay available until staff release; then the rental is active and the bike is rented. Checkout uses each bike’s daily or weekly rate. GCash receipts go to Cloudinary for staff review (not a payment webhook). Google OAuth and JWT-protected API.",
     gallery: [
       {
-        src: "/projects/munoz-cart.png",
+        src: "/projects/munoz-cart.webp",
         alt: "Muñoz Bike Rental checkout with pickup date, three bikes selected, and daily rate total",
       },
       {
-        src: "/projects/munoz-gcash.png",
+        src: "/projects/munoz-gcash.webp",
         alt: "Muñoz Bike Rental payment step with cash at pickup or GCash receipt upload",
       },
       {
@@ -164,7 +164,7 @@ export const projects: Project[] = [
       "Obsidian",
       "Markdown",
     ],
-    image: "/projects/knowledge-graph-cover.png",
+    image: "/projects/knowledge-graph-cover.webp",
     role: "AI Engineering & Systems",
     timeline: "Sep – Oct 2026",
     problem:
@@ -188,7 +188,7 @@ export const projects: Project[] = [
         alt: "Placeholder for a terminal screenshot of Hermes Agent indexing the research vault from the CLI",
       },
       {
-        src: "/projects/knowledge-graph-cover.png",
+        src: "/projects/knowledge-graph-cover.webp",
         alt: "Obsidian graph view of the research vault, with notes clustered by linked concepts",
       },
     ],
