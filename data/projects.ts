@@ -114,7 +114,7 @@ export const projects: Project[] = [
         alt: "Muñoz Bike Rental payment step with cash at pickup or GCash receipt upload",
       },
       {
-        src: "/projects/munoz-staff.png",
+        src: "/projects/munoz-staff.webp",
         alt: "Muñoz Bike Rental staff counter with today’s pickup queue and a booking ready to release",
       },
     ],
