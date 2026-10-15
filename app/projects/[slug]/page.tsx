@@ -88,7 +88,7 @@ export default async function ProjectPage({
                       rel="noopener noreferrer"
                     >
                       <ExternalLink aria-hidden="true" />
-                      Live demo
+                      Live site
                     </a>
                   </Button>
                 )}

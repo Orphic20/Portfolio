@@ -91,11 +91,10 @@ export const projects: Project[] = [
       "Cloudinary",
     ],
     image: "/projects/munoz-cover.webp",
-    // TODO(loewin): placeholder — swap for the real deployed URL before shipping.
-    demoUrl: "https://veloride.example.com",
+    demoUrl: "https://munoz-bike-rental.pages.dev/",
     repoUrl: "https://github.com/Orphic20/Bike_Rental",
     role: "Full-stack",
-    timeline: "Aug – Sep 2026",
+    timeline: "Aug – Oct 2026",
     problem:
       "A bike rental shop with a 100+ bike fleet needed a catalogue customers could book from — one or more bikes, today or a future pickup date, daily or weekly rates — and a way to pay by GCash (receipt upload) or cash at pickup. An online reservation could not be treated as if the bike was already out.",
     contribution: [
