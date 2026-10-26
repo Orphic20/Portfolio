@@ -75,6 +75,10 @@ export const projects: Project[] = [
         src: "/projects/courtflow-client-cases.webp",
         alt: "CourtFlow client cases view with matter status from intake through hearing",
       },
+      {
+        src: "/projects/courtflow-reports.webp",
+        alt: "CourtFlow reports for hearings, with date filters, export, and print",
+      },
     ],
   },
   {
