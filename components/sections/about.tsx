@@ -1,22 +1,28 @@
 import * as React from "react";
 import {
   ArrowUpRight,
-  Award,
   GraduationCap,
   ScrollText,
   Users,
 } from "lucide-react";
 
 import { Section } from "@/components/section";
+import { Badge } from "@/components/ui/badge";
 
 interface Credential {
   icon: React.ComponentType<{ className?: string }>;
   label: string;
   value?: string;
+  /** Secondary line under `value`, such as a school name. */
+  detail?: string;
   /** Small muted line under `value`. */
   note?: string;
-  /** Plain multi-entry list, for roles held concurrently. */
-  lines?: string[];
+  /** Short honor labels, shown as chips. */
+  honors?: string[];
+  /** One quiet line under the honor chips. */
+  honorNote?: string;
+  /** Titled roles with an organization and a period. */
+  roles?: { title: string; org: string; period: string }[];
   /** Rendered as a list of outbound verification links. */
   items?: { name: string; issuer: string; date: string; href: string }[];
 }
@@ -25,26 +31,36 @@ const credentials: Credential[] = [
   {
     icon: GraduationCap,
     label: "Education",
-    value: "BS Information Technology, Central Luzon State University",
+    value: "BS Information Technology",
+    detail: "Central Luzon State University",
     note: "2023 – present",
-    lines: [
-      "Gold and Bronze Medalist, SCUAA III swimming, 2023–2025",
-    ],
-  },
-  {
-    icon: Award,
-    label: "Academic standing",
-    value: "Presidential Award; University Scholar",
-    note: "AY 2023–2026",
+    honors: ["Presidential Award", "University Scholar", "SCUAA Gold & Bronze"],
+    honorNote: "AY 2023–2026 · SCUAA III swimming, 2023–2025",
   },
   {
     icon: Users,
     label: "Leadership",
-    lines: [
-      "Class President, Central Luzon State University, AY 2024–2027",
-      "Batch Leader, Builders of Information Technology Society (BITS), 2026",
-      "Student Coach, College of Engineering, CLSU, 2025–2026",
-      "Team Captain, Varsity Swimming Team, CLSU, 2025–2026",
+    roles: [
+      {
+        title: "Class President",
+        org: "Central Luzon State University",
+        period: "AY 2024–2027",
+      },
+      {
+        title: "Batch Leader",
+        org: "Builders of Information Technology Society",
+        period: "2026",
+      },
+      {
+        title: "Student Coach",
+        org: "College of Engineering, CLSU",
+        period: "2025–2026",
+      },
+      {
+        title: "Team Captain",
+        org: "Varsity Swimming Team",
+        period: "2025–2026",
+      },
     ],
   },
   {
@@ -86,11 +102,10 @@ export function About() {
         <div className="space-y-5 text-base leading-relaxed sm:text-lg">
           <p>
             I&apos;m a BS Information Technology student at Central Luzon State
-            University, a University Scholar and Presidential Award recipient
-            for AY 2023–2026, and Class President for the 2024–2027 term.
-            Alongside coursework
-            I&apos;ve earned Google certificates in IT support, Python
-            automation, and AI, plus AWS Academy Cloud Foundations.
+            University — University Scholar, and Class President for the
+            2024–2027 term. Alongside coursework I&apos;ve earned Google
+            certificates in IT support, Python automation, and AI, plus AWS
+            Academy Cloud Foundations.
           </p>
           <p className="text-muted-foreground">
             Most of what I know comes from building things end to end: designing
@@ -121,24 +136,59 @@ export function About() {
                   {item.label}
                 </dt>
                 {item.value && (
-                  <dd className="text-sm leading-relaxed font-medium">
-                    {item.value}
+                  <dd>
+                    <p className="text-sm leading-snug font-medium">
+                      {item.value}
+                    </p>
+                    {item.detail && (
+                      <p className="text-muted-foreground mt-0.5 text-sm leading-snug">
+                        {item.detail}
+                      </p>
+                    )}
                     {item.note && (
-                      <span className="text-muted-foreground ml-1.5 font-mono text-[0.6875rem] font-normal tracking-wide">
+                      <p className="text-muted-foreground mt-1 font-mono text-[0.6875rem] tracking-wide">
                         {item.note}
-                      </span>
+                      </p>
                     )}
                   </dd>
                 )}
-                {item.lines && (
+                {item.honors && (
+                  <dd className="mt-3">
+                    <ul className="flex flex-wrap gap-1.5">
+                      {item.honors.map((honor) => (
+                        <li key={honor}>
+                          <Badge variant="accent" size="sm">
+                            {honor}
+                          </Badge>
+                        </li>
+                      ))}
+                    </ul>
+                    {item.honorNote && (
+                      <p className="text-muted-foreground mt-2 font-mono text-[0.6875rem] tracking-wide">
+                        {item.honorNote}
+                      </p>
+                    )}
+                  </dd>
+                )}
+                {item.roles && (
                   <dd>
-                    <ul className="space-y-1.5">
-                      {item.lines.map((line) => (
+                    <ul className="space-y-3">
+                      {item.roles.map((role) => (
                         <li
-                          key={line}
-                          className="text-sm leading-relaxed font-medium"
+                          key={role.title}
+                          className="flex items-baseline justify-between gap-4"
                         >
-                          {line}
+                          <div className="min-w-0">
+                            <p className="text-sm leading-snug font-medium">
+                              {role.title}
+                            </p>
+                            <p className="text-muted-foreground mt-0.5 text-xs leading-snug">
+                              {role.org}
+                            </p>
+                          </div>
+                          <p className="text-muted-foreground shrink-0 font-mono text-[0.6875rem] tracking-wide">
+                            {role.period}
+                          </p>
                         </li>
                       ))}
                     </ul>
