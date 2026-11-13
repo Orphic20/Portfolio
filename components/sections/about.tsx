@@ -19,8 +19,8 @@ interface Credential {
   note?: string;
   /** Short honor labels, shown as chips. */
   honors?: string[];
-  /** One quiet line under the honor chips. */
-  honorNote?: string;
+  /** Quiet date phrases under the honor chips. Kept on one line each. */
+  honorNote?: string[];
   /** Titled roles with an organization and a period. */
   roles?: { title: string; org: string; period: string }[];
   /** Rendered as a list of outbound verification links. */
@@ -35,7 +35,7 @@ const credentials: Credential[] = [
     detail: "Central Luzon State University",
     note: "2023 – present",
     honors: ["Presidential Award", "University Scholar", "SCUAA Gold & Bronze"],
-    honorNote: "AY 2023–2026 · SCUAA III swimming, 2023–2025",
+    honorNote: ["AY 2023–2026", "SCUAA III swimming, 2023–2025"],
   },
   {
     icon: Users,
@@ -165,7 +165,12 @@ export function About() {
                     </ul>
                     {item.honorNote && (
                       <p className="text-muted-foreground mt-2 font-mono text-[0.6875rem] tracking-wide">
-                        {item.honorNote}
+                        {item.honorNote.map((part, index) => (
+                          <span key={part}>
+                            {index > 0 && " · "}
+                            <span className="whitespace-nowrap">{part}</span>
+                          </span>
+                        ))}
                       </p>
                     )}
                   </dd>
