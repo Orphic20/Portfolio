@@ -27,19 +27,24 @@ const credentials: Credential[] = [
     label: "Education",
     value: "BS Information Technology, Central Luzon State University",
     note: "2023 – present",
+    lines: [
+      "Gold and Bronze Medalist, SCUAA III swimming, 2023–2025",
+    ],
   },
   {
     icon: Award,
     label: "Academic standing",
-    value: "Presidential Lister",
+    value: "Presidential Award; University Scholar",
+    note: "AY 2023–2026",
   },
   {
     icon: Users,
     label: "Leadership",
     lines: [
-      "Class President, AY 2024–2027",
-      "Student Coach & Team Captain, Varsity Swimming Team",
-      "Batch Leader, Builders of Information Technology Society (BITS)",
+      "Class President, Central Luzon State University, AY 2024–2027",
+      "Batch Leader, Builders of Information Technology Society (BITS), 2026",
+      "Student Coach, College of Engineering, CLSU, 2025–2026",
+      "Team Captain, Varsity Swimming Team, CLSU, 2025–2026",
     ],
   },
   {
@@ -81,8 +86,9 @@ export function About() {
         <div className="space-y-5 text-base leading-relaxed sm:text-lg">
           <p>
             I&apos;m a BS Information Technology student at Central Luzon State
-            University, where I hold Presidential Lister standing and serve as
-            Class President for the 2024–2027 term. Alongside coursework
+            University, a University Scholar and Presidential Award recipient
+            for AY 2023–2026, and Class President for the 2024–2027 term.
+            Alongside coursework
             I&apos;ve earned Google certificates in IT support, Python
             automation, and AI, plus AWS Academy Cloud Foundations.
           </p>

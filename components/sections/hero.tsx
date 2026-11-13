@@ -92,7 +92,7 @@ export function Hero() {
           </div>
           <div className="flex items-center gap-2">
             <dt className="text-foreground/60">Standing</dt>
-            <dd>Presidential Lister</dd>
+            <dd>University Scholar, AY 2023–2026</dd>
           </div>
         </dl>
       </div>
