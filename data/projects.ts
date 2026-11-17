@@ -117,6 +117,10 @@ export const projects: Project[] = [
         alt: "Muñoz Bike Rental payment step with cash at pickup or GCash receipt upload",
       },
       {
+        src: "/projects/munoz-reservations.webp",
+        alt: "Muñoz Bike Rental staff reservations, with cash-at-counter bookings and record or reject actions",
+      },
+      {
         src: "/projects/munoz-staff.webp",
         alt: "Muñoz Bike Rental staff counter with today’s pickup queue and a booking ready to release",
       },
@@ -126,7 +130,7 @@ export const projects: Project[] = [
     name: "Resume & Candidate RAG Engine",
     slug: "rag-search-engine",
     description:
-      "In development — retrieval-augmented generation pipeline combining pgvector semantic search with relational metadata filtering and async processing",
+      "Planning stage — retrieval-augmented generation pipeline combining pgvector semantic search with relational metadata filtering and async processing",
     tags: [
       "Python",
       "FastAPI",
@@ -193,8 +197,8 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        src: "/projects/knowledge-graph-shot-cli.svg",
-        alt: "Placeholder for a terminal screenshot of Hermes Agent indexing the research vault from the CLI",
+        src: "/projects/knowledge-graph-hermes.webp",
+        alt: "Hermes Agent running Qwen3.5 4B locally, with the GBrain MCP server configured",
       },
       {
         src: "/projects/knowledge-graph-cover.webp",
