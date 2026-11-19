@@ -98,7 +98,7 @@ export const projects: Project[] = [
     demoUrl: "https://munoz-bike-rental.pages.dev/",
     repoUrl: "https://github.com/Orphic20/Bike_Rental",
     role: "Full-stack",
-    timeline: "Aug – Oct 2026",
+    timeline: "Sep – Nov 2026",
     problem:
       "A bike rental shop with a 100+ bike fleet needed a catalogue customers could book from — one or more bikes, today or a future pickup date, daily or weekly rates — and a way to pay by GCash (receipt upload) or cash at pickup. An online reservation could not be treated as if the bike was already out.",
     contribution: [
